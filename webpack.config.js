@@ -46,9 +46,9 @@ module.exports = {
         ]
     },
     plugins: [
-      //Put title into HTML page
+        //Put title into HTML page
         new HtmlWebpackPlugin({
-        title: "APP TITLE",
+          title: "City Air Quality",
         }),
         //.env VARS
         new Dotenv()
