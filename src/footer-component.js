@@ -41,7 +41,7 @@ liSocialGithub.className = "ms-3";
 
 let anchorGithub = document.createElement("a");
 anchorGithub.className = "text-muted";
-anchorGithub.setAttribute('href','https://www.linkedin.com/in/alfonsopisicchio/');
+anchorGithub.setAttribute('href','https://github.com/Forz70043');
 
 let iconGithub = document.createElement("i");
 iconGithub.className = "bi bi-github";
