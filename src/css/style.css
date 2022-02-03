@@ -1,4 +1,33 @@
 h1 {
   color: red;
 }
+
+#cityInput {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
+.form-control:focus {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+
+  border-top-color: transparent!important;
+  border-right-color: transparent!important;
+  border-left-color: transparent!important;
+
   
+} 
+
+#cityInput:focus {
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent;
+
+  border-top: none;
+  border-right: none;
+  border-left: none;
+
+  outline: none !important;
+}

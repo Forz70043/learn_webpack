@@ -1,3 +1,9 @@
+function doRequest(){ console.log(' clicked '+new Date().getTime()); }
+
+
+
+
+
 
 let form = document.createElement("form");
 let div = document.createElement("div");
@@ -16,6 +22,8 @@ cityInput.setAttribute('placeholder', 'City name ...');
 
 let button = document.createElement("button");
 button.className = "btn btn-primary btn-lg";
+button.setAttribute('onclick', 'doRequest()');
+
 
 let iconButton = document.createElement("i");
 iconButton.className = "bi bi-send";
