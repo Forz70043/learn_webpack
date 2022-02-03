@@ -9,7 +9,10 @@ container_fluid.className = "container-fluid";
 var linkBrand = document.createElement("a");
 linkBrand.className = "navbar-brand";
 linkBrand.setAttribute('href', '#');
-linkBrand.innerText = 'Navbar';
+iconNavBar = document.createElement("i")
+iconNavBar.className = "bi bi-activity";
+linkBrand.textContent = 'Life City Quality  ';
+linkBrand.appendChild(iconNavBar);
 
 container_fluid.appendChild(linkBrand);
 
