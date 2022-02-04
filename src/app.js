@@ -16,13 +16,10 @@ import utils from './utils';
 
 
 
-
-
+//document.getElementById('cityInput').addEventListener('change', utils('checkValidity'))
 
 document.getElementById('cityForm').addEventListener('submit', (event)=>{
-    
     event.preventDefault();
-    
     if(utils('checkValidity')){
         api(document.getElementById('cityInput').value)
     }

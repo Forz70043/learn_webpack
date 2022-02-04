@@ -1,14 +1,23 @@
 
 import Chart from 'chart.js/auto';
 console.log(" in utils")
+import notice from './js/components/notice-component';
 
 function xxx(){
     console.log("xxx");
 }
 
+function _catch(params){
+    console.log("catch");
+    notice(params);
+}
+
+
 function checkValidity(){
     if(!document.getElementById('cityForm').checkValidity()){
         document.getElementById('cityInput').classList.add('is-invalid');
+
+        document.getElementById('chart_1').classList.add('d-none');
         return false;
     }
     else{
@@ -28,7 +37,7 @@ function chartInit(params){
     var x = [];
     var y = [];
     document.getElementById('chart_1').classList.remove('d-none');
-    params.data.forEach(row => {
+    params.data.categories.forEach(row => {
         x.push(row.name);
         y.push(row.score_out_of_10);    
     });
@@ -90,5 +99,8 @@ export default (params, options)=>{
     }
     else if(params =='checkValidity'){
         return checkValidity();
+    }
+    else if(params =='catch'){
+        return _catch();
     }
 }
