@@ -16,6 +16,7 @@ linkBrand.appendChild(iconNavBar);
 
 container_fluid.appendChild(linkBrand);
 
+/*
 var button = document.createElement("button");
 button.className = "navbar-toggler";
 button.setAttribute('type', 'button');
@@ -25,7 +26,7 @@ span.className = "navbar-item-icon";
 
 button.appendChild(span);
 container_fluid.appendChild(button)
-
+*/
 
 nav.appendChild(container_fluid);
 
@@ -33,39 +34,6 @@ document.body.appendChild(nav);
 
 
 /*
-export default () => {
-    
-    var widget = ""
-    var nav = document.createElement("nav");
-    nav.className = "navbar navbar-expand-lg navbar-light bg-light"
-
-    var container_fluid = document.createElement("div");
-    container_fluid.className = "container-fluid";
-
-
-    var linkBrand = document.createElement("a");
-    linkBrand.className = "navbar-brand";
-    linkBrand.setAttribute('href', '#');
-    linkBrand.innerText = 'Navbar';
-
-    container_fluid.appendChild(linkBrand);
-
-    var button = document.createElement("button");
-    button.className = "navbar-toggler";
-    button.setAttribute('type', 'button');
-
-    var span = document.createElement("span");
-    span.className = "navbar-item-icon";
-
-    button.appendChild(span);
-    container_fluid.appendChild(button)
-
-
-    nav.appendChild(container_fluid);
-
-    return nav;
-
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Navbar</a>
@@ -103,5 +71,4 @@ export default () => {
   </div>
 </nav>
 
-};
 */
