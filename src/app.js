@@ -11,15 +11,19 @@ import './js/components/footer-component';
 import './js/components/form-component';
 import './js/components/dashboard-component'
 
-
-const axios = require('axios');
-
-
+import api from './js/components/api';
+import utils from './utils';
 
 
-//import component from './component';
-//import './image-component';
-import widget from './widget-component';
 
-console.log(process.env.API_URL)
-//document.getElementById('container').appendChild(component());
+
+
+
+document.getElementById('cityForm').addEventListener('submit', (event)=>{
+    
+    event.preventDefault();
+    
+    if(utils('checkValidity')){
+        api(document.getElementById('cityInput').value)
+    }
+});
