@@ -1,17 +1,18 @@
 
 
-export default (params) => {
+//export default () => {
+
     let notice = document.createElement("div");
-    notice.className = "alert alert-warning alert-dismissible fade show";
+    notice.className = "alert alert-warning alert-dismissible fade ";
     notice.setAttribute('role', 'alert');
     notice.setAttribute('id', 'alertNotice');
 
     var strongText = document.createElement("strong");
     var iconAlert = document.createElement("i");
-    iconAlert.className = "bi bi-waring";
-
-    notice.innerText = "No city found"
+    iconAlert.className = "bi bi-exclamation-triangle";
+    
     notice.appendChild(iconAlert)
+    notice.innerText = "No city found"
 
     var buttonClose = document.createElement("button");
     buttonClose.className = "btn-close";
@@ -21,7 +22,7 @@ export default (params) => {
     notice.appendChild(buttonClose);
 
     document.getElementById('rowNotice').appendChild(notice);
-}
+//}
 
 /*
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
