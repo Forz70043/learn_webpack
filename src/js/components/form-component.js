@@ -1,17 +1,8 @@
-console.log(" in form-component")
-function doRequest(){ console.log(' clicked '+new Date().getTime()); }
-console.log(" in form-component dopodichiarazione funct")
-
-
-
-
 
 let form = document.createElement("form");
 form.setAttribute('id', 'cityForm');
 form.className = 'needs-validation';
 form.setAttribute('novalidate', 'true');
-//form = document.createElement("div");
-//form.className = "row"
 
 let div = document.createElement("div");
 div.className = "mb-3 mt-5";
@@ -37,7 +28,6 @@ invalidFeedback.innerHTML = "Please provide a valid city.";
 
 let button = document.createElement("button");
 button.className = "btn btn-primary btn-lg";
-//button.setAttribute('onclick', '()=>{console.log("click")}');
 button.setAttribute('id', 'buttonSubmit');
 
 let iconButton = document.createElement("i");
@@ -68,4 +58,3 @@ formRow.appendChild(col_1)
 formRow.appendChild(col_2)  
 
 document.getElementById('container').appendChild(formRow);
-console.log(" in form-component alla fine di tutto ")
