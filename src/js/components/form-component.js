@@ -18,7 +18,7 @@ cityInput.setAttribute('id', 'cityInput');
 cityInput.setAttribute('required', 'true');
 cityInput.setAttribute('type', 'text');
 cityInput.setAttribute('minlength', '4');
-cityInput.setAttribute('placeholder', 'City name ...');
+cityInput.setAttribute('placeholder', 'City ');
 cityInput.setAttribute('aria-describedby', 'invalid-feedback');
 
 let invalidFeedback = document.createElement("div");
