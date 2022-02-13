@@ -9,16 +9,6 @@ let result ;
 export default (city) =>{
 
     if(city = utils.formatInput(city)){
-        //city = utils.formatInput(city);
-        /*
-        try {
-            let response = await axios.get(process.env.API_URL + '/urban_areas/slug:'+ city + '/scores');
-            console.log(response);
-        }
-        catch(err){
-            console.log(err);
-        }
-        */
 
         axios.get(process.env.API_URL + '/urban_areas/slug:'+ city + '/scores')
         .then((response) => {
@@ -36,13 +26,8 @@ export default (city) =>{
             utils.showHideNotice();
             console.log(result, e);
             return result;
-            utils._catch('catch', result);
-            
         });
     }
-    else{
-        //console.log("city != true", city);
-        return false;
-    }
+    else return false;
 
 }
