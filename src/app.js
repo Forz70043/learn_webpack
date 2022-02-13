@@ -10,17 +10,25 @@ import './js/components/container-component';
 import './js/components/footer-component';
 import './js/components/form-component';
 import './js/components/dashboard-component'
+import './js/components/notice-component';
 
 import api from './js/components/api';
-import utils from './utils';
+import * as utils from './utils';
 
 
 
-//document.getElementById('cityInput').addEventListener('change', utils('checkValidity'))
+document.getElementById('cityInput').addEventListener('change', (e) => utils.checkForm())
 
-document.getElementById('cityForm').addEventListener('submit', (event)=>{
+
+document.getElementById('cityForm').addEventListener('submit', (event)=>{    
     event.preventDefault();
-    if(utils('checkValidity')){
-        api(document.getElementById('cityInput').value)
+    if(utils.checkForm()) {
+        try {
+            api(utils.getValue('cityInput'));
+        }
+        catch(e){
+            console.log("eeeeee", e);
+        }
     }
+    
 });
