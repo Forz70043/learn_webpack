@@ -13,6 +13,7 @@ notice.innerText = "No city found"
 
 var buttonClose = document.createElement("button");
 buttonClose.className = "btn-close";
+buttonClose.setAttribute('title', 'Close');
 buttonClose.setAttribute('data-bs-dismiss', 'alert');
 buttonClose.setAttribute('alert-label', 'Close');
 
