@@ -1,32 +1,21 @@
 
+let notice = document.createElement("div");
+notice.className = "alert alert-warning alert-dismissible fade mt-2 ";
+notice.setAttribute('role', 'alert');
+notice.setAttribute('id', 'alertNotice');
 
-//export default () => {
+var strongText = document.createElement("strong");
+var iconAlert = document.createElement("i");
+iconAlert.className = "bi bi-exclamation-triangle";
 
-    let notice = document.createElement("div");
-    notice.className = "alert alert-warning alert-dismissible fade ";
-    notice.setAttribute('role', 'alert');
-    notice.setAttribute('id', 'alertNotice');
+notice.appendChild(iconAlert)
+notice.innerText = "No city found"
 
-    var strongText = document.createElement("strong");
-    var iconAlert = document.createElement("i");
-    iconAlert.className = "bi bi-exclamation-triangle";
-    
-    notice.appendChild(iconAlert)
-    notice.innerText = "No city found"
+var buttonClose = document.createElement("button");
+buttonClose.className = "btn-close";
+buttonClose.setAttribute('data-bs-dismiss', 'alert');
+buttonClose.setAttribute('alert-label', 'Close');
 
-    var buttonClose = document.createElement("button");
-    buttonClose.className = "btn-close";
-    buttonClose.setAttribute('data-bs-dismiss', 'alert');
-    buttonClose.setAttribute('alert-label', 'Close');
+notice.appendChild(buttonClose);
 
-    notice.appendChild(buttonClose);
-
-    document.getElementById('rowNotice').appendChild(notice);
-//}
-
-/*
-<div class="alert alert-warning alert-dismissible fade show" role="alert">
-  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-*/
+document.getElementById('rowNotice').appendChild(notice);
