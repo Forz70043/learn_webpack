@@ -1,23 +1,43 @@
-import utils from '../../utils';
+import * as utils from '../../utils';
+import * as dash from './charts.component';
+
 const axios = require('axios');
 
-var result ;
+let result ;
 
 
-export default (city=false) =>{
-    if(city){
-        city = city.toLowerCase().replace(' ','-');
-        axios.get(process.env.API_URL + 'urban_areas/slug:'+city+'/scores')
+export default (city) =>{
+
+    if(city = utils.formatInput(city)){
+        //city = utils.formatInput(city);
+        /*
+        try {
+            let response = await axios.get(process.env.API_URL + '/urban_areas/slug:'+ city + '/scores');
+            console.log(response);
+        }
+        catch(err){
+            console.log(err);
+        }
+        */
+
+        axios.get(process.env.API_URL + '/urban_areas/slug:'+ city + '/scores')
         .then((response) => {
             if(response.status == 200 && response.statusText == 'OK'){
                 result = {'status':response.status, 'text': response.statusText, 'data': {'categories':response.data.categories, 'summary':response.data.summary} };
-                return utils('chartInit', result);
+                return result; //utils.call('chartInit', result);
             }
+        })
+        .then((res)=>{
+            console.log("result ",res.data);
         })
         .catch(e => {
             result = {'data': false };
+            utils.setInvalid();
+            utils.showHideNotice();
             console.log(result, e);
-            return utils('catch', result);
+            return result;
+            utils._catch('catch', result);
+            
         });
     }
     else{
