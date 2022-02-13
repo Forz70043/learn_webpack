@@ -13,11 +13,11 @@ export function formatInput(input){
 
 function showNotice(){
     document.getElementById('alertNotice').classList.add('show');
-    document.getElementById('alertNotice').classList.remove('d-none');
+    //document.getElementById('alertNotice').classList.remove('d-none');
 }
 
-function hideNotice(){
-    document.getElementById('alertNotice').classList.add('d-none');
+export function hideNotice(){
+    //document.getElementById('alertNotice').classList.add('d-none');
     document.getElementById('alertNotice').classList.remove('show');
 }
 
@@ -198,31 +198,5 @@ export function checkForm(){
 }
 
 
-let utils = {
-    get: function(id){ return document.getElementById(id)},
-    call: function(params, options) {
-        console.log('in utils '+new Date().getTime()); 
-        if(params == 'chartInit' && options){
-            return chartInit(options);
-        }
-        else if(params =='catch'){
-            return _catch();
-        }
-    },
-    formatInput: function (input){ return input.toLowerCase().replace(' ','-'); },
-    checkForm: function(){ 
-        if(!document.getElementById('cityForm').checkValidity()){
-            //setInvalid();
-            return false;
-        }
-        else{
-            //if(notice)
-            //setValid();
-            //add('was-validated');
-            return true;
-        }
-    }
-};
-
-export default { formatInput, checkForm, get, getValue, _catch, setInvalid, showHideNotice };
+export default { formatInput, checkForm, get, getValue, _catch, setInvalid, showHideNotice, hideNotice };
 

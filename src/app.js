@@ -17,18 +17,24 @@ import * as utils from './utils';
 
 
 
-document.getElementById('cityInput').addEventListener('change', (e) => utils.checkForm())
+document.getElementById('cityInput').addEventListener('change', (e) => {
+    utils.checkForm();
+    utils.hideNotice();
+})
 
 
 document.getElementById('cityForm').addEventListener('submit', (event)=>{    
     event.preventDefault();
     if(utils.checkForm()) {
-        try {
+        //try {
             api(utils.getValue('cityInput'));
-        }
-        catch(e){
-            console.log("eeeeee", e);
-        }
+        //}
+        //catch(e){
+            //console.log("eeeeee", e);
+        //}
+    }
+    else{
+        console.log("XXXXXXX check form false")
     }
     
 });

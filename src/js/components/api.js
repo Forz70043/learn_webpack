@@ -7,9 +7,10 @@ let result ;
 
 
 export default (city) =>{
-
+    console.log("sto dentro ");
+    console.log("city: ",city);
     if(city = utils.formatInput(city)){
-
+        console.log("XXXXXXXX city ?");
         axios.get(process.env.API_URL + '/urban_areas/slug:'+ city + '/scores')
         .then((response) => {
             if(response.status == 200 && response.statusText == 'OK'){
@@ -24,7 +25,7 @@ export default (city) =>{
             result = {'data': false };
             utils.setInvalid();
             utils.showHideNotice();
-            console.log(result, e);
+            //console.log(result, e);
             return result;
         });
     }
